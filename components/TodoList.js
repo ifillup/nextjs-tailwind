@@ -6,7 +6,9 @@ import {useGlobalContext} from '../context/GlobalState'
 const TodoList = ({}) => {
     const {state: todos, dispatch } = useGlobalContext();
     useEffect(() => {
+        if(localStorage.getItem('todos')){
         dispatch({type: 'LOAD_TODOS', payload: JSON.parse(localStorage.getItem('todos'))})
+    }
     }, [])
     
 
