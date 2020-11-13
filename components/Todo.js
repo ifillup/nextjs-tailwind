@@ -7,7 +7,7 @@ const Todo = ({todo}) => {
             <span 
                 className='px-2 text-red-500 hover:text-red-800 cursor-pointer'
                 onClick={()=>dispatch(({type: 'DELETE_TODO', payload: todo.id}))} 
-                >X</span>
+            >X</span>
             <input 
                 className='px-2'
                 type="checkbox" 

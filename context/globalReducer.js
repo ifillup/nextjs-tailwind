@@ -8,7 +8,7 @@ export default function globalReducer(state, action) {
         case ('ADD_TODO'):
             return [
                 ...state,
-                { id: Math.floor(Math.random() * 9999), task: payload, completed: false  }
+                { id: Math.floor(Math.random() * 99999), task: payload, completed: false  }
             ]
         case ('TOGGLE_TODO'):
             return state.map(todo => (todo.id === payload ? {...todo, completed: !todo.completed} : todo))
